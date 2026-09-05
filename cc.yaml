@@ -366,7 +366,7 @@ rules:
   - RULE-SET,apple / Domain,国内网站
   - RULE-SET,google / Domain,国外网站
   - RULE-SET,proxy / Domain,国外网站
-  - RULE-SET,gfw / Domain,国外网站
+  - RULE-SET,direct / Domain,国内网站
   - RULE-SET,telegramcidr / IP,国外网站,no-resolve
   - RULE-SET,lancidr / IP,国内网站,no-resolve
   - RULE-SET,cncidr / IP,国内网站,no-resolve
