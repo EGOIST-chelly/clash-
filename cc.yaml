@@ -369,7 +369,7 @@ rules:
   - RULE-SET,reject / Domain,拒绝
   - RULE-SET,icloud / Domain,国内网站
   - RULE-SET,apple / Domain,国内网站
-  - RULE-SET,google / Domain,国外网站
+  - RULE-SET,Google / Domain,国外网站
   - RULE-SET,Google / IP,国外网站,no-resolve
   - RULE-SET,proxy / Domain,国外网站
   - RULE-SET,direct / Domain,国内网站
