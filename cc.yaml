@@ -160,15 +160,6 @@ proxy-groups:
     include-all: true
     filter: "(?=.*(剩余|流量|套餐|到期)).*$"
     
-  - name: 其他地区-故转
-    icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/global.png"
-    type: fallback
-    interval: 180
-    lazy: false
-    proxies:
-      - 其他地区-手动
-      - 其他地区-自动
-
   - name: 所有-自动
     icon: "https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/earth-setting.png"
     type: url-test
