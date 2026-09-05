@@ -1,1 +1,1 @@
-# clash-chelly分流配置优化
+chelly分流配置优化
