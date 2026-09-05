@@ -257,7 +257,7 @@ proxy-groups:
     type: select
     include-all: true
     filter: "(?=.*(广港|香港|HK|Hong Kong|🇭🇰|HongKong)).*$"
-    - name: 香港-自动
+  - name: 香港-自动
     icon: https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/dashboard.png
     type: url-test
     include-all: true
