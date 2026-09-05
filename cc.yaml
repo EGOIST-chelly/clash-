@@ -351,7 +351,7 @@ proxy-groups:
 # ========================
 rules:
 
-  - RULE-SET,Check / Domain,Check  
+  - RULE-SET,Check / Domain,Check
   - RULE-SET,ChatGPT / Domain,ChatGPT
   - RULE-SET,Claude / Domain,ChatGPT
   - RULE-SET,AI / Domain,ChatGPT
@@ -366,10 +366,10 @@ rules:
   - RULE-SET,apple / Domain,国内网站
   - RULE-SET,google / Domain,国外网站
   - RULE-SET,proxy / Domain,国外网站
-  - RULE-SET,direct / Domain,国内网站
+  - RULE-SET,gfw / Domain,国外网站
+  - RULE-SET,telegramcidr / IP,国外网站
   - RULE-SET,lancidr / IP,国内网站
   - RULE-SET,cncidr / IP,国内网站
-  - RULE-SET,telegramcidr / IP,国外网站
   - GEOIP,LAN,国内网站
   - GEOIP,CN,国内网站
   - MATCH,漏网之鱼
@@ -388,15 +388,15 @@ rule-providers:
   ChatGPT / Domain: {<<: *domain-mrs, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs"}
   Claude / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Claude/Claude.list"}
   AI / Domain: {<<: *domain-mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-ai-!cn.mrs"}
-  reject / Domain: {<<: *domain, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt", path: ./ruleset/reject.yaml}
-  icloud / Domain: {<<: *domain, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt", path: ./ruleset/icloud.yaml}
-  apple / Domain: {<<: *domain, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt", path: ./ruleset/apple.yaml}
-  google / Domain: {<<: *domain, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt", path: ./ruleset/google.yaml}
-  proxy / Domain: {<<: *domain, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt", path: ./ruleset/proxy.yaml}
-  direct / Domain: {<<: *domain, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt", path: ./ruleset/direct.yaml}
-  private / Domain: {<<: *domain, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt", path: ./ruleset/private.yaml}
-  gfw / Domain: {<<: *domain, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt", path: ./ruleset/gfw.yaml}
-  tld-not-cn / Domain: {<<: *domain, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt", path: ./ruleset/tld-not-cn.yaml}
+  reject / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt", path: ./ruleset/reject.yaml}
+  icloud / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt", path: ./ruleset/icloud.yaml}
+  apple / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt", path: ./ruleset/apple.yaml}
+  google / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt", path: ./ruleset/google.yaml}
+  proxy / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt", path: ./ruleset/proxy.yaml}
+  direct / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt", path: ./ruleset/direct.yaml}
+  private / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt", path: ./ruleset/private.yaml}
+  gfw / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt", path: ./ruleset/gfw.yaml}
+  tld-not-cn / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt", path: ./ruleset/tld-not-cn.yaml}
   telegramcidr / IP: {<<: *ip, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt", path: ./ruleset/telegramcidr.yaml}
   cncidr / IP: {<<: *ip, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt", path: ./ruleset/cncidr.yaml}
   lancidr / IP: {<<: *ip, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt", path: ./ruleset/lancidr.yaml}
