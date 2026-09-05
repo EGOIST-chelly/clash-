@@ -160,6 +160,8 @@ proxy-groups:
     include-all: true
     filter: "(?=.*(剩余|流量|套餐|到期)).*$"
     
+  - {name: 国外网站, <<: *default, icon: "https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/rocket-earth.png"}
+  
   - name: 所有-自动
     icon: "https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/earth-setting.png"
     type: url-test
@@ -171,7 +173,6 @@ proxy-groups:
   # 业务分流组
   - {name: ChatGPT, <<: *default, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png"}
   - {name: Check, <<: *default, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/speedtest.png"}
-  - {name: 国外网站, <<: *default, icon: "https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/rocket-earth.png"}
   - {name: 国内网站, <<: *default, icon: "https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/China.png"}
   - {name: 漏网之鱼, <<: *default, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/final.png"}
 
