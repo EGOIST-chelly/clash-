@@ -5,7 +5,7 @@
 proxy-providers:
 
   Airport-1:
-    url: "https://dasho.pqjc.site/api/v1/pq/d0a1927cd326b334719b06ebfb2196cd"
+    url: "机场链接"
     type: http
     interval: 43200
     override:
@@ -378,30 +378,30 @@ rules:
 # 规则集提供者
 # ========================
 rule-anchor:
-  ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: text}
-  domain: &domain {type: http, interval: 86400, behavior: domain, format: text}
-  class: &class {type: http, interval: 86400, behavior: classical, format: text}
+  ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: yaml}
+  class-text: &class-text {type: http, interval: 86400, behavior: classical, format: text}
+  class: &class {type: http, interval: 86400, behavior: classical, format: yaml}
+  domain-yaml: &domain-yaml {type: http, interval: 86400, behavior: domain, format: yaml}
   domain-mrs: &domain-mrs {type: http, interval: 86400, behavior: domain, format: mrs}
-
+  
 rule-providers:
-  Check / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/sev7enshare/Clash-Config/refs/heads/main/list/check.list"}
+  Check / Domain: {<<: *class-text, url: "https://gh-proxy.com/raw.githubusercontent.com/sev7enshare/Clash-Config/refs/heads/main/list/check.list"}
   ChatGPT / Domain: {<<: *domain-mrs, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs"}
-  Claude / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Claude/Claude.list"}
+  Claude / Domain: {<<: *class-text, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Claude/Claude.list"}
   AI / Domain: {<<: *domain-mrs, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-ai-!cn.mrs"}
-  reject / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt", path: ./ruleset/reject.yaml}
-  icloud / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt", path: ./ruleset/icloud.yaml}
-  apple / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt", path: ./ruleset/apple.yaml}
-  google / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt", path: ./ruleset/google.yaml}
-  proxy / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt", path: ./ruleset/proxy.yaml}
-  direct / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt", path: ./ruleset/direct.yaml}
-  private / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt", path: ./ruleset/private.yaml}
-  gfw / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt", path: ./ruleset/gfw.yaml}
-  tld-not-cn / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt", path: ./ruleset/tld-not-cn.yaml}
+  reject / Domain: {<<: *domain-yaml, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt", path: ./ruleset/reject.yaml}
+  icloud / Domain: {<<: *domain-yaml, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt", path: ./ruleset/icloud.yaml}
+  apple / Domain: {<<: *domain-yaml, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt", path: ./ruleset/apple.yaml}
+  google / Domain: {<<: *domain-yaml, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt", path: ./ruleset/google.yaml}
+  proxy / Domain: {<<: *domain-yaml, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt", path: ./ruleset/proxy.yaml}
+  direct / Domain: {<<: *domain-yaml, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt", path: ./ruleset/direct.yaml}
+  private / Domain: {<<: *domain-yaml, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt", path: ./ruleset/private.yaml}
+  gfw / Domain: {<<: *domain-yaml, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt", path: ./ruleset/gfw.yaml}
+  tld-not-cn / Domain: {<<: *domain-yaml, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt", path: ./ruleset/tld-not-cn.yaml}
   telegramcidr / IP: {<<: *ip, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt", path: ./ruleset/telegramcidr.yaml}
   cncidr / IP: {<<: *ip, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt", path: ./ruleset/cncidr.yaml}
   lancidr / IP: {<<: *ip, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt", path: ./ruleset/lancidr.yaml}
   applications / Domain: {<<: *class, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt", path: ./ruleset/applications.yaml}
-  
  
 
 
